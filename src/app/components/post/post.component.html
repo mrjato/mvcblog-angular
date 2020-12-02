@@ -1,0 +1,21 @@
+<div *ngIf="post">
+  <div class="jumbotron">
+    <h1>Artículo: {{post.title}}</h1>
+    <p class="lead">por {{post.author}}</p>
+    <hr/>
+    {{post.content}}
+  </div>
+
+  <div>
+    <h2>Comentarios</h2>
+    <p *ngIf="post.comments.length === 0; else comments">
+      Ningún comentario
+    </p>
+    <ng-template #comments>
+      <div *ngFor="let comment of post.comments">
+        {{comment.author}} ha comentado...
+        <p>{{comment.content}}</p>
+      </div>
+    </ng-template>
+  </div>
+</div>

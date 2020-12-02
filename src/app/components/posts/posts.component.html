@@ -1,0 +1,19 @@
+<h1>Artículos</h1>
+<table class="table">
+  <tr>
+    <th>Título</th>
+    <th>Autor</th>
+    <th>Acciones</th>
+  </tr>
+
+  <tr *ngFor="let post of posts">
+    <td>
+      <a [routerLink]="['/post', post.id]">{{post.title}}</a>
+    </td>
+    <td>
+      {{post.author}}
+    </td>
+    <td>
+    </td>
+  </tr>
+</table>
