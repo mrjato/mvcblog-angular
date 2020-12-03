@@ -1,6 +1,25 @@
 <header>
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark justify-content-between">
     <a class="navbar-brand" href="#">Angular - MVCBlog</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li *ngIf="isLogged()" class="nav-item">
+          <span class="navbar-text">{{getUser().username}}</span>
+        </li>
+        <li *ngIf="isLogged()" class="nav-item">
+          <button class="btn nav-link" (click)="onLogout()">Logout</button>
+        </li>
+        <li *ngIf="!isLogged()" class="nav-item nav-fill">
+          <a class="nav-link" [routerLink]="['/login']">Login</a>
+        </li>
+      </ul>
+    </div>
   </nav>
 </header>
 

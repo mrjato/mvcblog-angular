@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
+import {AuthenticationService} from './services/authentication.service';
+import {Credentials} from './models/Credentials';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +12,7 @@ export class AppComponent implements OnInit {
   public flash?: string;
 
   constructor(
+    private readonly authenticationService: AuthenticationService,
     private readonly route: ActivatedRoute,
     private readonly router: Router
   ) {
@@ -25,8 +28,21 @@ export class AppComponent implements OnInit {
     return this.flash;
   }
 
+  public isLogged(): boolean {
+    return this.authenticationService.hasCredentials();
+  }
+
+  public getUser(): Credentials | undefined {
+    return this.authenticationService.getCredentials();
+  }
+
   public onCloseFlash() {
     this.flash = null;
     this.router.navigate(this.route.snapshot.url);
+  }
+
+  public onLogout() {
+    this.authenticationService.logout();
+    this.router.navigate(['/']);
   }
 }
