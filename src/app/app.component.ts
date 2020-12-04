@@ -36,13 +36,13 @@ export class AppComponent implements OnInit {
     return this.authenticationService.getCredentials();
   }
 
-  public onCloseFlash() {
-    this.flash = null;
-    this.router.navigate(this.route.snapshot.url);
-  }
-
   public onLogout() {
     this.authenticationService.logout();
     this.router.navigate(['/']);
+  }
+
+  public onCloseFlash() {
+    this.flash = null;
+    this.router.navigate(this.route.snapshot.url);
   }
 }

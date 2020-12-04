@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
-import {Observable} from 'rxjs';
+import {Observable, of, throwError} from 'rxjs';
 import {environment} from '../../environments/environment';
 import {PostListWrapper} from './wrappers/PostListWrapper';
-import {map} from 'rxjs/operators';
+import {catchError, map, mapTo} from 'rxjs/operators';
 import {Post} from '../models/Post';
 import {HttpClient} from '@angular/common/http';
 import {PostWrapper} from './wrappers/PostWrapper';
@@ -40,6 +40,17 @@ export class PostsService {
     return this.http.put<PostWrapper>(`${environment.privateApi}/posts/${postId}.json`, postData)
       .pipe(
         map(data => data.post)
+      );
+  }
+
+  public delete(postId: number | string): Observable<boolean> {
+    // If the post is successfully deleted, true is returned.
+    // If an error 404 is received, false is returned.
+    // Otherwise, an exception is thrown.
+    return this.http.delete(`${environment.privateApi}/posts/${postId}.json`)
+      .pipe(
+        mapTo(true),
+        catchError(error => error.status === 404 ? of(false) : throwError(error))
       );
   }
 }

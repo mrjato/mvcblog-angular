@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {PostsService} from '../../services/posts.service';
 import {Post} from '../../models/Post';
 import {AuthenticationService} from '../../services/authentication.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-posts',
@@ -13,7 +14,8 @@ export class PostsComponent implements OnInit {
 
   constructor(
     private readonly service: PostsService,
-    private readonly authenticationService: AuthenticationService
+    private readonly authenticationService: AuthenticationService,
+    private readonly router: Router
   ) { }
 
   ngOnInit(): void {
@@ -28,5 +30,33 @@ export class PostsComponent implements OnInit {
 
   isOwner(post: Post): boolean {
     return this.isLogged() && this.authenticationService.getCredentials().username === post.author;
+  }
+
+  private removePost(id: number) {
+    this.posts = this.posts.filter(post => post.id !== id);
+    this.router.navigate(['/posts'], {queryParams: {flash: 'Artículo eliminado.'}});
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+
+  private notifyDeletionError() {
+    this.router.navigate(['/posts'], {queryParams: {flash: 'No se ha podido eliminar el artículo.'}});
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+
+  onDelete(id: number) {
+    if (confirm('Se va a eliminar el artículo. ¿Está seguro de que desea continuar?')) {
+      this.service.delete(id).subscribe(
+        deleted => {
+          if (deleted) {
+            this.removePost(id);
+          } else {
+            this.notifyDeletionError();
+          }
+        },
+        error => {
+          this.notifyDeletionError();
+        }
+      );
+    }
   }
 }

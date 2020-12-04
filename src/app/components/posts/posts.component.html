@@ -15,6 +15,7 @@
     </td>
     <td>
       <a *ngIf="isOwner(post)" [routerLink]="['/posts/edit/', post.id]">Editar</a>
+      <button *ngIf="isOwner(post)" class="btn btn-link" (click)="onDelete(post.id)">Eliminar</button>
     </td>
   </tr>
 </table>
