@@ -4,7 +4,7 @@ import {environment} from '../../environments/environment';
 import {PostListWrapper} from './wrappers/PostListWrapper';
 import {map} from 'rxjs/operators';
 import {Post} from '../models/Post';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 import {PostWrapper} from './wrappers/PostWrapper';
 import {PostData} from '../models/PostData';
 
@@ -12,6 +12,7 @@ import {PostData} from '../models/PostData';
   providedIn: 'root'
 })
 export class PostsService {
+
   constructor(private readonly http: HttpClient) { }
 
   public list(): Observable<Post[]> {
@@ -24,7 +25,7 @@ export class PostsService {
   public get(id: number | string): Observable<Post> {
     return this.http.get<PostWrapper>(`${environment.publicApi}/posts/${id}.json`)
       .pipe(
-        map(post => post.post)
+        map(list => list.post)
       );
   }
 
@@ -32,6 +33,13 @@ export class PostsService {
     return this.http.post<PostWrapper>(`${environment.privateApi}/posts.json`, postData)
       .pipe(
         map(post => post.post)
+      );
+  }
+
+  public edit(postId: number | string, postData: PostData): Observable<Post> {
+    return this.http.put<PostWrapper>(`${environment.privateApi}/posts/${postId}.json`, postData)
+      .pipe(
+        map(data => data.post)
       );
   }
 }

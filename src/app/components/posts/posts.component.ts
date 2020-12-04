@@ -25,4 +25,8 @@ export class PostsComponent implements OnInit {
   isLogged(): boolean {
     return this.authenticationService.hasCredentials();
   }
+
+  isOwner(post: Post): boolean {
+    return this.isLogged() && this.authenticationService.getCredentials().username === post.author;
+  }
 }

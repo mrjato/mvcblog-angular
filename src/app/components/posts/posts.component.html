@@ -14,6 +14,7 @@
       {{post.author}}
     </td>
     <td>
+      <a *ngIf="isOwner(post)" [routerLink]="['/posts/edit/', post.id]">Editar</a>
     </td>
   </tr>
 </table>
