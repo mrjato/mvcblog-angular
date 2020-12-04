@@ -17,5 +17,10 @@
         <p>{{comment.content}}</p>
       </div>
     </ng-template>
+
+    <div *ngIf="isLogged()">
+    <h3>Comentar</h3>
+    <app-add-comment [postId]="post.id" (comment)="onNewComment($event)"></app-add-comment>
+    </div>
   </div>
 </div>

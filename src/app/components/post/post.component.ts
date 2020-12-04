@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {PostsService} from '../../services/posts.service';
 import {Post} from '../../models/Post';
 import {ActivatedRoute, Router} from '@angular/router';
+import {Comment} from '../../models/Comment';
+import {AuthenticationService} from '../../services/authentication.service';
 
 @Component({
   selector: 'app-post',
@@ -13,6 +15,7 @@ export class PostComponent implements OnInit {
 
   constructor(
     private readonly service: PostsService,
+    private readonly authenticationService: AuthenticationService,
     private readonly route: ActivatedRoute,
     private readonly router: Router
   ) { }
@@ -24,5 +27,13 @@ export class PostComponent implements OnInit {
       post => this.post = post,
       error => this.router.navigate(['/posts'], {queryParams: {flash: 'Post no encontrado.'}})
     );
+  }
+
+  onNewComment(comment: Comment) {
+    this.post.comments.push(comment);
+  }
+
+  isLogged() {
+    return this.authenticationService.hasCredentials();
   }
 }

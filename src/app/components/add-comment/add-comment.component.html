@@ -1,0 +1,11 @@
+<form [formGroup]="commentForm">
+  <div class="form-group">
+    <textarea id="contentTextArea" class="form-control" formControlName="content"></textarea>
+  </div>
+
+  <div *ngIf="error" class="form-row alert alert-danger">{{error}}</div>
+
+  <button (click)="onSubmitForm()" [disabled]="!commentForm.valid" class="btn btn-primary">
+    Comentar
+  </button>
+</form>

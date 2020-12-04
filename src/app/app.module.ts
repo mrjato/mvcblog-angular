@@ -11,6 +11,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {BasicAuthenticationInterceptor} from './lifecycle/basic-authentication.interceptor';
 import {AddPostComponent} from './components/add-post/add-post.component';
 import {EditPostComponent} from './components/edit-post/edit-post.component';
+import {AddCommentComponent} from './components/add-comment/add-comment.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {EditPostComponent} from './components/edit-post/edit-post.component';
     PostComponent,
     LoginComponent,
     AddPostComponent,
-    EditPostComponent
+    EditPostComponent,
+    AddCommentComponent
   ],
   imports: [
     BrowserModule,
