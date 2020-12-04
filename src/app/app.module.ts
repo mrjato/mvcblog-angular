@@ -9,13 +9,15 @@ import {PostComponent} from './components/post/post.component';
 import {LoginComponent} from './components/login/login.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {BasicAuthenticationInterceptor} from './lifecycle/basic-authentication.interceptor';
+import {AddPostComponent} from './components/add-post/add-post.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostsComponent,
     PostComponent,
-    LoginComponent
+    LoginComponent,
+    AddPostComponent
   ],
   imports: [
     BrowserModule,

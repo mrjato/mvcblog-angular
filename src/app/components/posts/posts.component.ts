@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {PostsService} from '../../services/posts.service';
-import {Observable} from 'rxjs';
 import {Post} from '../../models/Post';
+import {AuthenticationService} from '../../services/authentication.service';
 
 @Component({
   selector: 'app-posts',
@@ -12,12 +12,17 @@ export class PostsComponent implements OnInit {
   public posts: Post[];
 
   constructor(
-    private readonly service: PostsService
+    private readonly service: PostsService,
+    private readonly authenticationService: AuthenticationService
   ) { }
 
   ngOnInit(): void {
     this.service.list().subscribe(
       posts => this.posts = posts
     );
+  }
+
+  isLogged(): boolean {
+    return this.authenticationService.hasCredentials();
   }
 }
