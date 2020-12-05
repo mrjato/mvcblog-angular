@@ -25,7 +25,7 @@ export class PostComponent implements OnInit {
 
     this.service.get(id).subscribe(
       post => this.post = post,
-      error => this.router.navigate(['/posts'], {queryParams: {flash: 'Post no encontrado.'}})
+      error => this.router.navigate(['/posts'], {queryParams: {flash: $localize`Artículo no encontrado.`}})
     );
   }
 

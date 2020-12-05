@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="es-ES" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="bb694b49d408265c91c62799c2b3a7e3151c824d" datatype="html">
+        <source>Logout</source>
+        <target>Logout</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6765b4c916060f6bc42d9bb69e80377dbcb5e4e9" datatype="html">
+        <source>Login</source>
+        <target>Login</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/login/login.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="366d6f6def4f31f636f28cc9a0414cb1dcdcc9c2" datatype="html">
+        <source>Artículos</source>
+        <target>Posts</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/posts/posts.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="474bf12b729ea585af34e59baa9f28b58c472a8f" datatype="html">
+        <source>Título</source>
+        <target>Title</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/posts/posts.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/add-post/add-post.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/edit-post/edit-post.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e3409e9c1c468b07de71d123a086ccc6752962f1" datatype="html">
+        <source>Autor</source>
+        <target>Author</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/posts/posts.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9922c762b7c572b56dfa01bece905c0e07e41fb6" datatype="html">
+        <source>Acciones</source>
+        <target>Actions</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/posts/posts.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5d6e2342e48d75e405f0fc141ab3e4a93c872dbb" datatype="html">
+        <source>Editar</source>
+        <target>Edit</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/posts/posts.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4c0cfd3e88d5d6af1d5f23914fb74cb353a83811" datatype="html">
+        <source>Eliminar</source>
+        <target>Delete</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/posts/posts.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="06b2f17c9f47e4c18b6004771c081ea3132d9a5a" datatype="html">
+        <source>Crear artículo</source>
+        <target>Create post</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/posts/posts.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/add-post/add-post.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="540e02343340177ef20ef64711c74594b5c6b087" datatype="html">
+        <source>Artículo: <x id="INTERPOLATION" equiv-text="{{post.title}}"/></source>
+        <target>Post: <x id="INTERPOLATION" equiv-text="{{post.title}}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/post/post.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1737daaf11c89fea7974fc3085fa4aeaed1415d2" datatype="html">
+        <source>por <x id="INTERPOLATION" equiv-text="{{post.author}}"/></source>
+        <target>by <x id="INTERPOLATION" equiv-text="{{post.author}}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/post/post.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9bea75f59a97f4d38867c24cd4ebc75243eaa406" datatype="html">
+        <source>Comentarios</source>
+        <target>Comments</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/post/post.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="97b26725f54612421c744ec6e69e14614188d13a" datatype="html">
+        <source>
+      Ningún comentario
+    </source>
+        <target>
+      No comments
+    </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/post/post.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9420c620d67341f477eee64e6fce8ae5c2d9649f" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{comment.author}}"/> ha comentado...</source>
+        <target><x id="INTERPOLATION" equiv-text="{{comment.author}}"/> has commented...</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/post/post.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="a684d99b6728b0441b789b005ea7c55f649e62ab" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{comment.content}}"/></source>
+        <target><x id="INTERPOLATION" equiv-text="{{comment.content}}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/post/post.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2bcb0870810b5422717af47db9916cba8ec726eb" datatype="html">
+        <source>Comentar</source>
+        <target>Comentar</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/post/post.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d6087afdf45e27676be7cf97dd9a18c694e0d0f0" datatype="html">
+        <source>Por favor, introduce tu usuario y password</source>
+        <target>Please, introduce your user and password</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/login/login.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9f2fa13d37e4d24b6f994a7dbde4a19a9b09c8f7" datatype="html">
+        <source>Usuario</source>
+        <target>User</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/login/login.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="e369e13629132e32dcd958b82261059243f21d58" datatype="html">
+        <source>Contraseña</source>
+        <target>Password</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/login/login.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7c61a7687e8a1b72a907b1144b4af3dd6e234d17" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{error}}"/></source>
+        <target><x id="INTERPOLATION" equiv-text="{{error}}"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/login/login.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/add-post/add-post.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/edit-post/edit-post.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/add-comment/add-comment.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="be98f0c0c3a2030fa55baee7f82cf9d75d257270" datatype="html">
+        <source>Regístrame</source>
+        <target>Register me</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/login/login.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="87a19e2d64747454e5f040250a1a99a53cc11fc5" datatype="html">
+        <source>Ir a registro</source>
+        <target>Go to register</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/login/login.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3b02f12ccebd538afb525ed2f70eb46e7e302a9e" datatype="html">
+        <source>Ir a login</source>
+        <target>Go to login</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/login/login.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="17bd66320e68a49315a0bd9d3b5533f0169a9ac8" datatype="html">
+        <source>Contenido</source>
+        <target>Content</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/add-post/add-post.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/edit-post/edit-post.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="c3b98b2a758b545d14fb1ccfef405c06b689868c" datatype="html">
+        <source>
+    Guardar artículo
+  </source>
+        <target>
+    Save post
+  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/add-post/add-post.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/edit-post/edit-post.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="dcabb198ee5fefbeed6e3c8b6e50cbe6478ff886" datatype="html">
+        <source>Editar artículo</source>
+        <target>Edit post</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/edit-post/edit-post.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="d3132c5f4229de2ec08e20541ee89ab0bbd9e7b9" datatype="html">
+        <source>
+    Comentar
+  </source>
+        <target>
+    Comment
+  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/add-comment/add-comment.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7812183938525596157" datatype="html">
+        <source>Artículo no encontrado.</source>
+        <target>Post not found.</target>
+      </trans-unit>
+      <trans-unit id="7043569363184980650" datatype="html">
+        <source>Artículo "<x id="PH"/>" creado.</source>
+        <target>Post "<x id="PH"/>" created.</target>
+      </trans-unit>
+      <trans-unit id="159003207520026427" datatype="html">
+        <source>Error recuperando el artículo.</source>
+        <target>Error recovering post.</target>
+      </trans-unit>
+      <trans-unit id="2636606951392880752" datatype="html">
+        <source>Artículo "<x id="PH"/>" modificado.</source>
+        <target>Post "<x id="PH"/>" modified.</target>
+      </trans-unit>
+      <trans-unit id="6316435372926561158" datatype="html">
+        <source>Usuario y contraseña no válidos.</source>
+        <target>Invalida user and password.</target>
+      </trans-unit>
+      <trans-unit id="5827905226221099687" datatype="html">
+        <source>No se ha podido completar el registro.</source>
+        <target>Registry could not be completed.</target>
+      </trans-unit>
+      <trans-unit id="3474958577794549159" datatype="html">
+        <source>Artículo no encontrado.</source>
+        <target>Post not found.</target>
+      </trans-unit>
+      <trans-unit id="3742379884359734315" datatype="html">
+        <source>Artículo eliminado.</source>
+        <target>Post delete.</target>
+      </trans-unit>
+      <trans-unit id="324482565672568726" datatype="html">
+        <source>No se ha podido eliminar el artículo.</source>
+        <target>Post could not be deleted.</target>
+      </trans-unit>
+      <trans-unit id="1207853800367464505" datatype="html">
+        <source>Se va a eliminar el artículo. ¿Está seguro de que desea continuar?</source>
+        <target>The post is about to be deleted. Do you wish to continue?</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

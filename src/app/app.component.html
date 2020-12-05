@@ -9,14 +9,19 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
+        <li class="nab-item inline">
+          <button class="btn nav-link" (click)="onChangeLocale('es')">es</button>
+          |
+          <button class="btn nav-link" (click)="onChangeLocale('en')">en</button>
+        </li>
         <li *ngIf="isLogged()" class="nav-item">
           <span class="navbar-text">{{getUser().username}}</span>
         </li>
         <li *ngIf="isLogged()" class="nav-item">
-          <button class="btn nav-link" (click)="onLogout()">Logout</button>
+          <button class="btn nav-link" (click)="onLogout()" i18n>Logout</button>
         </li>
         <li *ngIf="!isLogged()" class="nav-item nav-fill">
-          <a class="nav-link" [routerLink]="['/login']">Login</a>
+          <a class="nav-link" [routerLink]="['/login']" i18n>Login</a>
         </li>
       </ul>
     </div>
@@ -26,7 +31,7 @@
 <main role="main">
   <div class="container">
     <div *ngIf="getFlash()" class="alert alert-warning alert-dismissible fade show" role="alert">
-      {{getFlash()}}
+      <ng-container>{{getFlash()}}</ng-container>
       <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="onCloseFlash()">
         <span aria-hidden="true">&times;</span>
       </button>
