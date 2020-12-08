@@ -1,21 +1,26 @@
-<h1>{{isLogin ? 'Login' : 'Registro'}}</h1>
+<h1>
+  <ng-container *ngIf="isLogin" i18n>Login</ng-container>
+  <ng-container *ngIf="!isLogin" i18n>Registro</ng-container>
+</h1>
 <form [formGroup]="userForm">
-  <legend>Por favor, introduce tu usuario y password</legend>
+  <legend i18n>Por favor, introduce tu usuario y password</legend>
   <div class="form-group">
-    <label for="usernameInput">Usuario</label>
+    <label for="usernameInput" i18n>Usuario</label>
     <input id="usernameInput" class="form-control" type="text" formControlName="username">
   </div>
   <div class="form-group">
-    <label for="passwdInput">Contraseña</label>
+    <label for="passwdInput" i18n>Contraseña</label>
     <input id="passwdInput" class="form-control" type="password" formControlName="passwd">
   </div>
   <div *ngIf="error" class="form-row alert alert-danger">{{error}}</div>
   <div class="form-row">
     <button (click)="onSubmit()" [disabled]="!userForm.valid" class="btn btn-primary" type="button">
-      {{isLogin ? 'Login' : 'Registrarme'}}
+      <ng-container *ngIf="isLogin" i18n>Login</ng-container>
+      <ng-container *ngIf="!isLogin" i18n>Regístrame</ng-container>
     </button>
     <button (click)="onChange()" class="btn btn-secondary" type="button">
-      {{isLogin ? 'Ir a registro' : 'Ir a login'}}
+      <ng-container *ngIf="isLogin" i18n>Ir a registro</ng-container>
+      <ng-container *ngIf="!isLogin" i18n>Ir a login</ng-container>
     </button>
   </div>
 </form>

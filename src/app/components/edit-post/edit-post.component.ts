@@ -46,7 +46,7 @@ export class EditPostComponent implements OnInit {
         });
       },
       () => {
-        this.router.navigate(['/posts'], {queryParams: {flash: 'Error recuperando el artículo.'}});
+        this.router.navigate(['/posts'], {queryParams: {flash: $localize`Error recuperando el artículo.`}});
       }
     );
   }
@@ -56,7 +56,7 @@ export class EditPostComponent implements OnInit {
 
     this.service.edit(this.post.id, data).subscribe(
       post => {
-        this.router.navigate(['/posts'], {queryParams: {flash: `Artículo "${post.title}" modificado.`}});
+        this.router.navigate(['/posts'], {queryParams: {flash: $localize`Artículo "${post.title}" modificado.`}});
       },
       error => {
         this.error = error.message;

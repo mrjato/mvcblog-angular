@@ -1,26 +1,26 @@
 <div *ngIf="post">
   <div class="jumbotron">
-    <h1>Artículo: {{post.title}}</h1>
-    <p class="lead">por {{post.author}}</p>
+    <h1 i18n>Artículo: {{post.title}}</h1>
+    <p class="lead" i18n>por {{post.author}}</p>
     <hr/>
     {{post.content}}
   </div>
 
   <div>
-    <h2>Comentarios</h2>
-    <p *ngIf="post.comments.length === 0; else comments">
+    <h2 i18n>Comentarios</h2>
+    <p *ngIf="post.comments.length === 0; else comments" i18n>
       Ningún comentario
     </p>
     <ng-template #comments>
       <div *ngFor="let comment of post.comments">
-        {{comment.author}} ha comentado...
-        <p>{{comment.content}}</p>
+        <ng-container i18n>{{comment.author}} ha comentado...</ng-container>
+        <p i18n>{{comment.content}}</p>
       </div>
     </ng-template>
 
     <div *ngIf="isLogged()">
-    <h3>Comentar</h3>
-    <app-add-comment [postId]="post.id" (comment)="onNewComment($event)"></app-add-comment>
+      <h3 i18n>Comentar</h3>
+      <app-add-comment [postId]="post.id" (comment)="onNewComment($event)"></app-add-comment>
     </div>
   </div>
 </div>

@@ -34,17 +34,17 @@ export class PostsComponent implements OnInit {
 
   private removePost(id: number) {
     this.posts = this.posts.filter(post => post.id !== id);
-    this.router.navigate(['/posts'], {queryParams: {flash: 'Artículo eliminado.'}});
+    this.router.navigate(['/posts'], {queryParams: {flash: $localize`Artículo eliminado.`}});
     window.scrollTo({top: 0, behavior: 'smooth'});
   }
 
   private notifyDeletionError() {
-    this.router.navigate(['/posts'], {queryParams: {flash: 'No se ha podido eliminar el artículo.'}});
+    this.router.navigate(['/posts'], {queryParams: {flash: $localize`No se ha podido eliminar el artículo.`}});
     window.scrollTo({top: 0, behavior: 'smooth'});
   }
 
   onDelete(id: number) {
-    if (confirm('Se va a eliminar el artículo. ¿Está seguro de que desea continuar?')) {
+    if (confirm($localize`Se va a eliminar el artículo. ¿Está seguro de que desea continuar?`)) {
       this.service.delete(id).subscribe(
         deleted => {
           if (deleted) {

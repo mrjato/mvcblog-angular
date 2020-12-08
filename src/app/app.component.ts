@@ -45,4 +45,8 @@ export class AppComponent implements OnInit {
     this.flash = null;
     this.router.navigate(this.route.snapshot.url);
   }
+
+  public onChangeLocale(locale: string) {
+    window.location.href = `/${locale}${this.router.routerState.snapshot.url}`;
+  }
 }

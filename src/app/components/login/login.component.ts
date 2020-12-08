@@ -50,7 +50,7 @@ export class LoginComponent {
           },
           error => {
             if (error.status === 401) {
-              this.error = 'Usuario y contraseña no válidos.';
+              this.error = $localize`Usuario y contraseña no válidos.`;
             } else {
               this.error = error.message;
             }
@@ -63,7 +63,7 @@ export class LoginComponent {
             this.router.navigate(['/']);
           },
           () => {
-            this.error = 'No se ha podido completar el registro.';
+            this.error = $localize`No se ha podido completar el registro.`;
           }
         );
     }

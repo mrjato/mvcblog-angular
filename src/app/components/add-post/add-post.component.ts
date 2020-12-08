@@ -36,7 +36,7 @@ export class AddPostComponent {
 
     this.service.add(data).subscribe(
       post => {
-        this.router.navigate(['/posts'], {queryParams: {flash: `Artículo "${post.title}" creado.`}});
+        this.router.navigate(['/posts'], {queryParams: {flash: $localize`Artículo "${post.title}" creado.`}});
       },
       error => {
         this.error = error.messsage;

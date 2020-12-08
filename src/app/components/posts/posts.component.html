@@ -1,9 +1,9 @@
-<h1>Artículos</h1>
+<h1 i18n>Artículos</h1>
 <table class="table">
   <tr>
-    <th>Título</th>
-    <th>Autor</th>
-    <th>Acciones</th>
+    <th i18n>Título</th>
+    <th i18n>Autor</th>
+    <th i18n>Acciones</th>
   </tr>
 
   <tr *ngFor="let post of posts">
@@ -14,10 +14,10 @@
       {{post.author}}
     </td>
     <td>
-      <a *ngIf="isOwner(post)" [routerLink]="['/posts/edit/', post.id]">Editar</a>
-      <button *ngIf="isOwner(post)" class="btn btn-link" (click)="onDelete(post.id)">Eliminar</button>
+      <a *ngIf="isOwner(post)" [routerLink]="['/posts/edit/', post.id]" i18n>Editar</a>
+      <button *ngIf="isOwner(post)" class="btn btn-link" (click)="onDelete(post.id)" i18n>Eliminar</button>
     </td>
   </tr>
 </table>
 
-<a *ngIf="isLogged()" [routerLink]="['/posts/add']">Crear artículo</a>
+<a *ngIf="isLogged()" [routerLink]="['/posts/add']" i18n>Crear artículo</a>

@@ -3,9 +3,9 @@
     <textarea id="contentTextArea" class="form-control" formControlName="content"></textarea>
   </div>
 
-  <div *ngIf="error" class="form-row alert alert-danger">{{error}}</div>
+  <div *ngIf="error" class="form-row alert alert-danger" i18n>{{error}}</div>
 
-  <button (click)="onSubmitForm()" [disabled]="!commentForm.valid" class="btn btn-primary">
+  <button (click)="onSubmitForm()" [disabled]="!commentForm.valid" class="btn btn-primary" i18n>
     Comentar
   </button>
 </form>
